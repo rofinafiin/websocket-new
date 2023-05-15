@@ -4,6 +4,7 @@ import (
 	"flag"
 	"log"
 
+	"github.com/aiteung/musik"
 	"github.com/gofiber/fiber"
 	"github.com/gofiber/websocket"
 )
@@ -87,7 +88,7 @@ func main() {
 		}
 	}))
 
-	addr := flag.String("addr", ":8080", "http service address")
+	addr := flag.String("addr", musik.Dangdut(), "http service address")
 	flag.Parse()
 	app.Listen(*addr)
 }
